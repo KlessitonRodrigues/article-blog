@@ -1,0 +1,13 @@
+{
+  "name": "article-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": "https://github.com/KlessitonRodrigues/article-blog.git",
+  "author": "klessitonrds <klessitom@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
