@@ -2,7 +2,9 @@
   "name": "article-blog",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "api:start": "yarn workspace @article-blog/api run start"
+  },
   "workspaces": [
     "packages/*"
   ],
