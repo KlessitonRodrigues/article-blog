@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "api:start": "yarn workspace @article-blog/api run start"
+    "api:dev": "yarn workspace @article-blog/api run develop",
+    "web:dev": "yarn workspace @article-blog/web run dev"
   },
   "workspaces": [
     "packages/*"
