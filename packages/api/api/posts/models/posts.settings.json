@@ -39,8 +39,8 @@
       "targetField": "title"
     },
     "category": {
-      "model": "categories",
-      "via": "posts"
+      "via": "posts",
+      "model": "categories"
     }
   }
 }
