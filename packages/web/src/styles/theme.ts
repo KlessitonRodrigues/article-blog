@@ -2,27 +2,46 @@ const settings = {
   colors: {
     primary: '#077FDB',
     secondary: '#156DB0',
-    onPrimary: '#F6F6F6',
     background: '#EBEBEB',
-    onBackgorund: '#444',
     surface: '#EEF5FC',
-    onSurface: '#444',
+    onPrimary: '#F6F6F6',
+    onSurface: '#666',
+    onBackgorund: '#666',
   },
   radius: {
-    sm: '4px',
-    md: '6px',
+    sm: '8px',
+    md: '12px',
     lg: '16px',
   },
   shadow: {
-    sm: '0px 2px 3px #0004',
-    md: '0px 4px 4px #0004',
-    lg: '0px 4px 6px #000c',
+    sm: '0px 2px 3px #3334',
+    md: '0px 4px 4px #3334',
+    lg: '0px 4px 4px 2px #3334',
   },
   screens: {
     xs: '320px',
     sm: '480px',
     md: '768px',
     lg: '1024px',
+  },
+  font: {
+    sizes: {
+      0: '0.75rem',
+      1: '1rem',
+      2: '1.25rem',
+      3: '1.5rem',
+      4: '1.75rem',
+      5: '2rem',
+      6: '2.25rem',
+    },
+    title: {
+      size: '1.5rem',
+      weight: 'bold',
+    },
+    paragraph: {
+      size: '1rem',
+      weight: 'normal',
+    },
   },
 }
 

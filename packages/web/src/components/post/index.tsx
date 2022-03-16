@@ -1,25 +1,13 @@
 import Link from 'next/link'
 
+import { Post, postMock } from '../../data/constants/post'
 import * as s from './styled'
 
 type Props = {
-  post: {
-    title: Api.Post['title']
-    content: Api.Post['content']
-    published_at: Api.Post['published_at']
-    author: {
-      name: Api.Post['author']['name']
-    }
-    category: {
-      name: Api.Post['category']['name']
-      color: Api.Post['category']['color']
-    }
-    cover: { url: Api.Post['cover']['url'] }
-    slug: Api.Post['slug']
-  }
+  post: Post
 }
 
-const Post = ({ post }: Props) => {
+const PostUI = ({ post = postMock }: Props) => {
   const publishedData =
     new Date(post.published_at).toLocaleDateString('en', {
       month: 'short',
@@ -28,20 +16,20 @@ const Post = ({ post }: Props) => {
     }) || ''
 
   return (
-    <Link href={'/posts'} as={`/posts/${post.slug}`}>
+    <Link href={`/posts/${post.slug}`} passHref={true}>
       <s.Container>
         <s.CoverBox>
-          <s.Cover src={post.cover.url || ''} />
+          <s.Cover src={post.cover.url} />
         </s.CoverBox>
         <s.Background>
-          <s.Title>{post.title || ''}</s.Title>
+          <s.Title>{post.title}</s.Title>
           <s.Author>
-            <b>{post.author.name || ''}</b> at {publishedData}
+            <b>{post.author.name}</b> at {publishedData}
           </s.Author>
           <s.Hr />
-          <s.Content>{post.content.slice(0, 300) || ''}</s.Content>
+          <s.Content>{post.content.slice(0, 300)}</s.Content>
           <s.Category color={post.category.color}>
-            #{post.category.name || ''}
+            #{post.category.name}
           </s.Category>
         </s.Background>
       </s.Container>
@@ -49,4 +37,4 @@ const Post = ({ post }: Props) => {
   )
 }
 
-export default Post
+export default PostUI

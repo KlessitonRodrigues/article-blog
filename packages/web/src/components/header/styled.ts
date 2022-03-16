@@ -17,9 +17,10 @@ export const Background = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding: 1rem;
 
   ${({ theme }) => theme.forMedia.lg} {
-    border-radius: ${({ theme }) => theme.radius.md};
+    border-radius: ${({ theme }) => theme.radius.sm};
   }
 `
 
@@ -31,14 +32,14 @@ export const NavItem = styled.li`
   ${({ theme }) => theme.hover.onPrimary};
   display: inline;
   margin: 0 1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 `
 
 export const HiddenMenu = styled.div<{ show?: boolean }>`
   ${({ theme }) => theme.panels.surfacePanel};
   display: ${({ show }) => (show ? 'block' : 'none')};
   margin: 0;
-  padding-top: 1rem;
+  padding: 1rem 1rem 0.5rem;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   top: 1rem;
@@ -50,4 +51,5 @@ export const HiddenMenuItem = styled.li`
   animation: ${slideLeft} 0.2s linear;
   display: inline-block;
   margin: 0 1rem;
+  font-size: 1.5rem;
 `
